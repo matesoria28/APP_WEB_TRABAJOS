@@ -5,18 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punto Café - Checkout</title>
 </head>
+
 <body>
      <header>
+        <h1>Punto Café</h1>
 
-        
+        <a href="./index.html" aria-label="Ir al Inicio">
+            <img src="recursos/imagenes/logoPC.png" alt="Logo Punto Café">
+        </a>
+
+        <nav>
+            <a href="./index.html">
+                Inicio
+            </a>
+            <a href="./menu.html">
+                Menú
+            </a>
+            <a href="./checkout.html">
+                Checkout
+            </a>
+        </nav>
+
+        <a href="./checkout.html" aria-label="Ir al Checkout">
+            <img src="recursos/imagenes/carrito.png" alt="Carrito de Compras" width="35">
+        </a>
     </header>
     <main>
+        <h2>Finalizar Pedido</h2>
 
+        <section>
+            <h2>Datos de Retiro</h2>
 
+            <form action="#" method="post">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+
+                <label for="horario">Horario estimado de retiro</label>
+                <input type="time" id="horario" name="horario" required>
+
+                <fieldset>
+                    <legend>¿Dónde vas a consumir?</legend>
+
+                    <label>
+                        <input type="radio" name="modalidad" value="retiro" checked>
+                        Retiro en Local
+                    </label>
+
+                    <label>
+                        <input type="radio" name="modalidad" value="mesa">
+                        Consumo en Mesa
+                    </label>
+                </fieldset>
+
+                <button type="submit">Confirmar Pedido</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Resumen del Pedido</h2>
+
+            <ul>
+                <li>1x Flat White - $450</li>
+                <li>1x Croissant Clásico - $600</li>
+            </ul>
+
+            <p>Subtotal: $1050</p>
+            <p><strong>Total: $1050</strong></p>
+        </section>
     </main>
     <footer>
-
-
+        <ul>
+            <a href="https://instagram.com/@puntocafe_ar" target="_blank">
+                @puntocafe_ar
+            </a>
+            <p>Punto Café SRL</p>
+            <p>Horarios: Lunes a Viernes 07:00 a 21:00 hs.</p>
+            <p>2026 Punto Café. Todos los derechos reservados.</p>
+        </ul>
     </footer>
 </body>
 </html>
