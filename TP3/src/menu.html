@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Punto Café - Menú</title>
+    <link rel="stylesheet" href="estilos/menu.css" />
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <a class="marca-header" href="./index.html" aria-label="Ir al Inicio">
+        <img src="recursos/imagenes/logoPC.png" alt="Logo Punto Café" />
+        <span>Punto Café</span>
+      </a>
+
+      <nav class="navegacion-principal">
+        <a href="./index.html">Inicio</a>
+        <a class="activo" href="./menu.html" >Menú</a>
+        <a href="./checkout.html">Checkout</a>
+      </nav>
+
+      <a class="carrito-header" href="./checkout.html" aria-label="Ir al Checkout">
+        <img src="recursos/imagenes/carrito.png" alt="Carrito de Compras" width="35"/>
+      </a>
+    </header>
+
+    <main class="contenido-principal">
+      <h1>Nuestro Menú</h1>
+
+      <section class="seccion-filtros"> 
+        <div class ="filtros-lista">
+            <a href="#todos" class="filtro-btn activo">Todos</a>
+            <a href="#cafe" class="filtro-btn">Café</a>
+            <a href="#combos" class="filtro-btn">Combos</a>
+            <a href="#pasteleria" class="filtro-btn">Pastelería</a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="titulo-seccion">Productos</h2>
+
+       <div class="grilla-productos">
+
+    <article id="cafe" class="tarjeta-producto">
+        <img src="recursos/imagenes/cafes.png" alt="Flat Whitte" width="300"/>
+        <div class="info-card">
+            <h3>Flat White</h3>
+            <p class="precio">$450</p>
+            <p class="descripcion">Doble shot de espresso con leche cremada.</p>
+            <button type="button" class="btn-agregar">Agregar</button>
+        </div>
+    </article>
+
+    <article id="pasteleria" class="tarjeta-producto">
+        <img src="recursos/imagenes/croissant.png" alt="Croissant Clásico" width="300"/>
+        <div class="info-card">
+            <h3>Croissant Clásico</h3>
+            <p class="precio">$600</p>
+            <p class="descripcion">Hojaldre artesanal.</p>
+            <button type="button" class="btn-agregar">Agregar</button>
+        </div>
+    </article>
+
+    <article id="tostada" class="tarjeta-producto">
+        <img src="recursos/imagenes/avocado.png" alt="Avocado Toast" width="300"/>
+        <div class="info-card">
+            <h3>Avocado Toast</h3>
+            <p class="precio">$1200</p>
+            <p class="descripcion">Tostada con palta y cherrys.</p>
+            <button type="button" class="btn-agregar">Agregar</button>
+        </div>
+    </article>
+
+    <article id="cookie" class="tarjeta-producto">
+        <img src="recursos/imagenes/cookie.png" alt="Cookie" width="300" />
+        <div class="info-card">
+            <h3>Cookies</h3>
+            <p class="precio">$400</p>
+            <p class="descripcion">Cookie de chocolate.</p>
+            <button type="button" class="btn-agregar">Agregar</button>
+        </div>
+    </article>
+
+    <!-- PRODUCTO NUEVO 1 -->
+    <article id="combos" class="tarjeta-producto">
+        <img src="recursos/imagenes/combo.png" alt="Combo Desayuno" width="300"/>
+        <div class="info-card">
+            <h3>Combo Desayuno</h3>
+            <p class="precio">$1100</p>
+            <p class="descripcion">Café con leche mediano + 2 medialunas.</p>
+            <button type="button" class="btn-agregar">Agregar</button>
+        </div>
+    </article>
+
+    <!-- PRODUCTO NUEVO 2 -->
+    <article id="espresso" class="tarjeta-producto">
+        <img src="recursos/imagenes/espresso.png" alt="Espresso Doble" width="300"/>
+        <div class="info-card">
+            <h3>Espresso Doble</h3>
+            <p class="precio">$500</p>
+            <p class="descripcion">Extracción doble de café de especialidad.</p>
+            <button type="button" class="btn-agregar">Agregar</button>
+        </div>
+    </article>
+
+</div>
+      </section>
+    </main>
+
+    <footer class="pie">
+
+      <div class="contenido-pie">
+
+        <div class="columna-pie">
+            <h3 class="titulo-pie">Punto Café</h3>
+          <p>Tu dosis diaria de café de especialidad, listo para acompañar tu ritmo urbano.</p>
+          <p class="empresa-pie">Punto Café SRL</p>
+        </div>
+
+        <div class="columna-pie">
+          <h4 class="subtitulo-pie">Navegación</h4>
+          <ul class="lista-pie">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./menu.html">Menú</a></li>
+            <li><a href="./checkout.html">Checkout</a></li>
+            <li>
+              <a class="instagram-link" href="https://instagram.com/@puntocafe_ar" target="_blank">@puntocafe_ar</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4 class="subtitulo-pie">Horarios</h4>
+          <p>
+            <strong>Lunes a Viernes:</strong><br />
+            07:00 a 20:00 hs.
+          </p>
+          <p>
+            <strong>Sábados y Domingos:</strong><br />
+            09:00 a 19:00 hs.
+          </p>
+        </div>
+      </div>
+
+      <div class="copyright-pie">
+        <p>© 2026 Punto Café. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

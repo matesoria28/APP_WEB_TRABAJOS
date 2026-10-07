@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+/* RESETEO Y CONFIGURACIÓN GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF5EF; 
+    color: #453029;
+    font-family: 'Outfit', sans-serif;
+}
+
+.encabezado {
+    background-color: #f3e7df; /* Fondo claro para que resalten logo y carrito */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #EFEAE4; /* linea divisoria */
+}
+
+/* Logo + Texto a la izquierda*/
+.marca-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;       /* Espacio entre logo y texto */
+    text-decoration: none;
+    color: #453029; 
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.marca-header img {
+    width: 65px;
+    height: auto;
+}
+
+.navegacion-principal {
+    display: flex;
+    gap: 30px; /* Separación entre links */
+}
+
+.navegacion-principal a {
+    color: #453029;
+    text-decoration: none;  
+    font-size: 1.15rem;    
+    font-weight: 600;  /* grosor letra */
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent; 
+}
+
+
+.navegacion-principal a:hover {
+    color: #D97736;    /* Cambia a color naranja al pasar el mouse por arriba*/
+}
+
+.navegacion-principal a.activo {
+    color: #D97736;
+    border-bottom: 3px solid #D97736; /* Linea naranja fija abajo de 'Menú' */
+}
+.contenido-principal {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.contenido-principal h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #453029;
+}
+.contenido-principal a {
+    color: #453029;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contenido-principal a:hover,
+.contenido-principal a.activo {
+    color: #D97736; /* Color naranja al pasar el mouse o página activa */
+}
+
+/* Carrito a la derecha */
+.carrito-header img {
+    width: 35px;
+    height: auto;
+    display: block;
+}
+
+.seccion-filtros {
+    margin-bottom: 35px;
+}
+
+.seccion-filtros h2 {
+    display: none; 
+}
+
+.lista-filtros {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+.filtros-lista {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.filtro-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #EFEAE4;
+    color: #2C1D18;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease; /* Transición suave para el cambio de color */
+}
+
+.filtro-btn:hover {
+    background-color: #E2D9CE;
+}
+
+/* Estado Activo ("Todos") */
+.filtro-btn.activo {
+    background-color: #D97736; 
+    color: #FFFFFF !important; /* FORZAMOS la letra blanca para que se lea "Todos" */
+    box-shadow: 0 4px 10px rgba(217, 119, 54, 0.25); /* Sombra naranja suave */
+}
+/* Productos (CSS Grid) */
+.seccion-productos h2 {
+    display: none;
+}
+
+.titulo-seccion {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #453029;
+}
+
+.grilla-productos {
+    display: grid;
+    grid-template-columns: 1fr;  /* 1 columna en movil */
+    gap: 25px;
+}
+
+.tarjeta-producto {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;   /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra */
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Para que la imagen se ajuste al contenedor sin deformarse */
+}
+
+.info-card {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;   /* Para que la descripción ocupe el espacio disponible */
+}
+
+.info-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2C1D18;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    font-size: 0.85rem;
+    color: #8C7A6B;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-agregar {
+    background-color: #D97736;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    align-self: flex-start; /* Alinea el botón al inicio del contenedor */
+}
+
+.btn-agregar:hover {
+    background-color: #B85F24;
+}
+
+/* MEDIA QUERY (3 COLUMNAS EN COMPUTADORA) */
+@media (min-width: 768px) {    /* A partir de 768px de ancho, se aplican los estilos dentro de este bloque */
+    .grilla-productos {
+        grid-template-columns: repeat(3, 1fr);   /* 3 columnas de igual tamaño */
+    }
+}
+
+/*  PIE DE PÁGINA  en 3 Columnas */ 
+.pie {
+    background-color: #2C1D18; 
+    color: #FBF8F3;
+    padding: 40px 40px 20px 40px;
+    margin-top: 60px;
+}
+
+.contenido-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea las columnas al inicio del contenedor */
+    flex-wrap: wrap;  /*elementos colocados en varias líneas*/
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.columna-pie {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-pie {
+    color: #D97736;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo-pie {
+    color: #D97736;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.columna-pie p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #EFEAE4;
+    margin-bottom: 8px;
+}
+
+.empresa-pie {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.lista-pie {
+    list-style: none;
+}
+
+.lista-pie li {
+    margin-bottom: 8px;
+}
+
+.lista-pie a {
+    color: #EFEAE4;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.lista-pie a:hover,
+.instagram-link {
+    color: #D97736;
+}
+
+.copyright-pie {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #A89F91;
+}
