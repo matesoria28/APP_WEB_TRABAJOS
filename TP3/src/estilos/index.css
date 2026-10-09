@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+/* RESETEO Y CONFIGURACIÓN GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF5EF;
+    color: #453029;
+    font-family: 'Outfit', sans-serif;
+}
+
+img {
+    max-width: 100%; /* ninguna imagen se sale de su contenedor */
+    display: block;
+}
+
+/* ENCABEZADO (mismas clases que en menu.html) */
+.encabezado {
+    background-color: #f3e7df;
+    display: flex;
+    flex-wrap: wrap; /* en celular la navegación baja a una segunda línea */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #EFEAE4;
+}
+
+.marca-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #453029;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.marca-header img {
+    width: 65px;
+    height: auto;
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    order: 3;  /* pasa al final de la fila en celular */
+    width: 100%;
+}
+
+.navegacion-principal a {
+    color: #453029;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+}
+
+.navegacion-principal a:hover {
+    color: #D97736;
+}
+
+.navegacion-principal a.activo {
+    color: #D97736;
+    border-bottom: 3px solid #D97736;
+}
+
+.carrito-header img {
+    width: 35px;
+    height: auto;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido-principal {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.contenido-principal section {
+    margin-bottom: 50px;
+}
+
+.titulo-seccion {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #453029;
+}
+
+/* Botones de llamada a la acción */
+.btn-principal,
+.btn-promo {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-principal {
+    background-color: #D97736;
+    color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(217, 119, 54, 0.25);
+}
+
+.btn-principal:hover {
+    background-color: #B85F24;
+}
+
+.btn-promo {
+    background-color: #FAF5EF;
+    color: #2C1D18;
+}
+
+.btn-promo:hover {
+    background-color: #D97736;
+    color: #FFFFFF;
+}
+
+/* PORTADA (Flexbox) */
+.portada {
+    display: flex;
+    flex-direction: column; /* en celular: texto arriba, imagen abajo */
+    gap: 25px;
+    background-color: #f3e7df;
+    border-radius: 12px;
+    padding: 30px 20px;
+}
+
+.texto-portada h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: #2C1D18;
+    margin-bottom: 12px;
+}
+
+.texto-portada p {
+    font-size: 1.05rem;
+    color: #8C7A6B;
+    margin-bottom: 25px;
+}
+
+.imagen-portada {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* recorta la imagen sin deformarla */
+    border-radius: 12px;
+}
+
+/* CATEGORÍAS (CSS Grid) */
+.grilla-categorias {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+    gap: 25px;
+}
+
+.tarjeta-categoria {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* toda la tarjeta es un enlace */
+.tarjeta-categoria a {
+    display: block;
+    text-decoration: none;
+    color: #453029;
+}
+
+.tarjeta-categoria img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.tarjeta-categoria h3 {
+    font-size: 1.15rem;
+    padding: 18px 18px 4px;
+}
+
+.link-explorar {
+    padding: 0 18px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #D97736;
+}
+
+.tarjeta-categoria:hover {
+    transform: translateY(-4px); /* la tarjeta "sube" al pasar el mouse */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* PROMO DE LA SEMANA */
+.seccion-promo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: #D97736;
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px 20px;
+}
+
+.etiqueta-promo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.texto-promo h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.texto-promo p {
+    margin-bottom: 20px;
+}
+
+.imagen-promo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* PIE DE PÁGINA en 3 columnas (igual que en menu.html) */
+.pie {
+    background-color: #2C1D18;
+    color: #FBF8F3;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+}
+
+.contenido-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.columna-pie {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-pie {
+    color: #D97736;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo-pie {
+    color: #D97736;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.columna-pie p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #EFEAE4;
+    margin-bottom: 8px;
+}
+
+.empresa-pie {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.lista-pie {
+    list-style: none;
+}
+
+.lista-pie li {
+    margin-bottom: 8px;
+}
+
+.lista-pie a {
+    color: #EFEAE4;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.lista-pie a:hover,
+.instagram-link {
+    color: #D97736;
+}
+
+.copyright-pie {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #A89F91;
+}
+
+/* MEDIA QUERY (TABLET Y COMPUTADORA) */
+@media (min-width: 768px) {
+    .encabezado {
+        flex-wrap: nowrap;
+        padding: 8px 40px;
+    }
+
+    .navegacion-principal {
+        order: 0;  /* vuelve al centro, entre logo y carrito */
+        width: auto;
+    }
+
+    /* portada y promo pasan a dos columnas: texto a la izquierda, imagen a la derecha */
+    .portada,
+    .seccion-promo {
+        flex-direction: row;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .texto-portada,
+    .texto-promo,
+    .imagen-portada,
+    .imagen-promo {
+        flex: 1; /* cada mitad ocupa el mismo ancho */
+    }
+
+    .texto-portada h1 {
+        font-size: 2.8rem;
+    }
+
+    .imagen-portada,
+    .imagen-promo {
+        height: 280px;
+    }
+
+    .grilla-categorias {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    }
+
+    .pie {
+        padding: 40px 40px 20px;
+    }
+}

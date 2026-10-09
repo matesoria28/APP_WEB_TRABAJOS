@@ -1,91 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Punto Café - Inicio</title>
-</head>
 
-<body>
-    <header>
-        <h1>Punto Café</h1>
+    <link rel="stylesheet" href="estilos/index.css" />
+  </head>
 
-        <a href="./index.html" aria-label="Ir al Inicio">
-            <img src="recursos/imagenes/logoPC.png" alt="Logo Punto Café">
-        </a>
+  <body>
+    <header class="encabezado">
+      <a class="marca-header" href="./index.html" aria-label="Ir al Inicio">
+        <img src="recursos/imagenes/logoPC.png" alt="Logo Punto Café" />
 
-        <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="./menu.html">Menú</a>
-            <a href="./checkout.html">Checkout</a>
-        </nav>
+        <span>Punto Café</span>
+      </a>
 
-        <a href="./checkout.html" aria-label="Ir al Checkout">
-            <img src="recursos/imagenes/carrito.png" alt="Carrito de Compras" width="35">
-        </a>
+      <nav class="navegacion-principal">
+        <a class="activo" href="./index.html">Inicio</a>
+
+        <a href="./menu.html">Menú</a>
+
+        <a href="./checkout.html">Checkout</a>
+      </nav>
+
+      <a
+        class="carrito-header"
+        href="./checkout.html"
+        aria-label="Ir al Checkout"
+      >
+        <img
+          src="recursos/imagenes/carrito.png"
+          alt="Carrito de Compras"
+          width="35"
+        />
+      </a>
     </header>
 
-    <main>
-        <section>
-            <h2>El mejor café de especialidad</h2>
-            <p>Pedí online, retirá en segundos o disfrutalo en nuestra sucursal.</p>
-            <a href="./menu.html">Ver Menú</a>
-            <br><br>
-            <img src="recursos/imagenes/cafes.png" alt="Café de especialidad recién preparado" width="500">
-        </section>
+    <main class="contenido-principal">
+      <section class="portada">
+        <div class="texto-portada">
+          <h1>El mejor café de especialidad</h1>
 
-        <section>
-            <h2>Nuestras Categorías</h2>
-            <ul>
-                <li>
-                    <article>
-                        <h3>Café</h3>
-                        <a href="./menu.html">
-                            <img src="recursos/imagenes/cafes.png" alt="Categoría Café" width="200">
-                            <p>Explorar Café</p>
-                        </a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Combos</h3>
-                        <a href="./menu.html">
-                            <img src="recursos/imagenes/avocado.png" alt="Categoría Combos" width="200">
-                            <p>Explorar Combos</p>
-                        </a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Pastelería</h3>
-                        <a href="./menu.html">
-                            <img src="recursos/imagenes/croissant.png" alt="Categoría Pastelería" width="200">
-                            <p>Explorar Pastelería</p>
-                        </a>
-                    </article>
-                </li>
-            </ul>
-        </section>
+          <p>
+            Pedí online, retirá en segundos o disfrutalo en nuestra sucursal.
+          </p>
 
-        <section>
-            <h2>PROMO DE LA SEMANA</h2>
-            <p><strong>2x1 Espressos:</strong> Todos los martes de 14:00 a 17:00 hs.</p>
-            <a href="./menu.html">Aprovechar Promo</a>
-        </section>
-    </main>
-    
-    <footer>
-        <ul>
-            <a href="https://instagram.com/@puntocafe_ar" >
-                @puntocafe_ar
-            </a>
-            <p>Punto Café SRL</p>
-            <p>Horarios: Lunes a Viernes 07:00 a 21:00 hs.</p>
-            <p>2026 Punto Café. Todos los derechos reservados.</p>
+          <a class="btn-principal" href="./menu.html">Ver Menú</a>
+        </div>
+
+        <img
+          class="imagen-portada"
+          src="recursos/imagenes/cafes.png"
+          alt="Café de especialidad recién preparado"
+          width="500"
+        />
+      </section>
+
+      <section class="seccion-categorias">
+        <h2 class="titulo-seccion">Nuestras Categorías</h2>
+
+        <ul class="grilla-categorias">
+          <li>
+            <article class="tarjeta-categoria">
+              <a href="./menu.html#cafe">
+                <img
+                  src="recursos/imagenes/cafes.png"
+                  alt="Categoría Café"
+                  width="200"
+                />
+
+                <h3>Café</h3>
+
+                <p class="link-explorar">Explorar Café</p>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="tarjeta-categoria">
+              <a href="./menu.html#combos">
+                <img
+                  src="recursos/imagenes/avocado.png"
+                  alt="Categoría Combos"
+                  width="200"
+                />
+
+                <h3>Combos</h3>
+
+                <p class="link-explorar">Explorar Combos</p>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="tarjeta-categoria">
+              <a href="./menu.html#pasteleria">
+                <img
+                  src="recursos/imagenes/croissant.png"
+                  alt="Categoría Pastelería"
+                  width="200"
+                />
+
+                <h3>Pastelería</h3>
+
+                <p class="link-explorar">Explorar Pastelería</p>
+              </a>
+            </article>
+          </li>
         </ul>
+      </section>
 
+      <section class="seccion-promo">
+        <div class="texto-promo">
+          <p class="etiqueta-promo">Promo de la semana</p>
+
+          <h2>2x1 en Espressos</h2>
+
+          <p>Todos los martes de 14:00 a 17:00 hs.</p>
+
+          <a class="btn-promo" href="./menu.html#cafe">Aprovechar Promo</a>
+        </div>
+
+        <img
+          class="imagen-promo"
+          src="recursos/imagenes/espresso.png"
+          alt="Espresso recién servido"
+          width="420"
+        />
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenido-pie">
+        <div class="columna-pie">
+          <h3 class="titulo-pie">Punto Café</h3>
+
+          <p>
+            Tu dosis diaria de café de especialidad, listo para acompañar tu
+            ritmo urbano.
+          </p>
+
+          <p class="empresa-pie">Punto Café SRL</p>
+        </div>
+
+        <div class="columna-pie">
+          <h4 class="subtitulo-pie">Navegación</h4>
+
+          <ul class="lista-pie">
+            <li><a href="./index.html">Inicio</a></li>
+
+            <li><a href="./menu.html">Menú</a></li>
+
+            <li><a href="./checkout.html">Checkout</a></li>
+
+            <li>
+              <a
+                class="instagram-link"
+                href="https://instagram.com/@puntocafe_ar"
+                target="_blank"
+                >@puntocafe_ar</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4 class="subtitulo-pie">Horarios</h4>
+
+          <p>
+            <strong>Lunes a Viernes:</strong><br />
+
+            07:00 a 20:00 hs.
+          </p>
+
+          <p>
+            <strong>Sábados y Domingos:</strong><br />
+
+            09:00 a 19:00 hs.
+          </p>
+        </div>
+      </div>
+
+      <div class="copyright-pie">
+        <p>© 2026 Punto Café. Todos los derechos reservados.</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
