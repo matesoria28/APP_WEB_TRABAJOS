@@ -1,87 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Punto Café - Checkout</title>
-</head>
-
-<body>
-     <header>
-        <h1>Punto Café</h1>
-
-        <a href="./index.html" aria-label="Ir al Inicio">
-            <img src="recursos/imagenes/logoPC.png" alt="Logo Punto Café">
-        </a>
-
-        <nav>
-            <a href="./index.html">
-                Inicio
-            </a>
-            <a href="./menu.html">
-                Menú
-            </a>
-            <a href="./checkout.html">
-                Checkout
-            </a>
-        </nav>
-
-        <a href="./checkout.html" aria-label="Ir al Checkout">
-            <img src="recursos/imagenes/carrito.png" alt="Carrito de Compras" width="35">
-        </a>
+    <link rel="stylesheet" href="estilos/checkout.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <a class="marca-header" href="./index.html" aria-label="Ir al Inicio">
+        <img src="recursos/imagenes/logoPC.png" alt="Logo Punto Café" />
+        <span>Punto Café</span>
+      </a>
+      <nav class="navegacion-principal">
+        <a href="./index.html">Inicio</a>
+        <a href="./menu.html">Menú</a>
+        <a class="activo" href="./checkout.html">Checkout</a>
+      </nav>
+      <a
+        class="carrito-header"
+        href="./checkout.html"
+        aria-label="Ir al Checkout"
+      >
+        <img
+          src="recursos/imagenes/carrito.png"
+          alt="Carrito de Compras"
+          width="35"
+        />
+      </a>
     </header>
-    <main>
-        <h2>Finalizar Pedido</h2>
 
-        <section>
-            <h2>Datos de Retiro</h2>
+    <main class="contenido-principal">
+      <h1>Finalizar Pedido</h1>
 
-            <form action="#" method="post">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+      <div class="grilla-checkout">
+        <section class="tarjeta-checkout seccion-datos">
+          <h2 class="titulo-seccion">Datos de Retiro</h2>
+          <form class="formulario-retiro" action="#" method="post">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej. Juan Pérez"
+                required
+              />
+            </div>
 
-                <label for="horario">Horario estimado de retiro</label>
-                <input type="time" id="horario" name="horario" required>
+            <div class="campo">
+              <label for="horario">Horario estimado de retiro</label>
+              <input type="time" id="horario" name="horario" required />
+            </div>
 
-                <fieldset>
-                    <legend>¿Dónde vas a consumir?</legend>
+            <fieldset class="opciones-modalidad">
+              <legend>¿Dónde vas a consumir?</legend>
+              <label class="opcion-modalidad">
+                <input
+                  type="radio"
+                  name="modalidad"
+                  value="retiro"
+                  checked
+                />
+                <span>Retiro en Local</span>
+              </label>
+              <label class="opcion-modalidad">
+                <input type="radio" name="modalidad" value="mesa" />
+                <span>Consumo en Mesa</span>
+              </label>
+            </fieldset>
 
-                    <label>
-                        <input type="radio" name="modalidad" value="retiro" checked>
-                        Retiro en Local
-                    </label>
-
-                    <label>
-                        <input type="radio" name="modalidad" value="mesa">
-                        Consumo en Mesa
-                    </label>
-                </fieldset>
-
-                <button type="submit">Confirmar Pedido</button>
-            </form>
+            <button type="submit" class="btn-confirmar">
+              Confirmar Pedido
+            </button>
+          </form>
         </section>
 
-        <section>
-            <h2>Resumen del Pedido</h2>
-
-            <ul>
-                <li>1x Flat White - $450</li>
-                <li>1x Croissant Clásico - $600</li>
-            </ul>
-
-            <p>Subtotal: $1050</p>
-            <p><strong>Total: $1050</strong></p>
+        <section class="tarjeta-checkout seccion-resumen">
+          <h2 class="titulo-seccion">Resumen del Pedido</h2>
+          <ul class="lista-resumen">
+            <li class="item-resumen">
+              <span class="item-nombre">1x Flat White</span>
+              <span class="item-precio">$450</span>
+            </li>
+            <li class="item-resumen">
+              <span class="item-nombre">1x Croissant Clásico</span>
+              <span class="item-precio">$600</span>
+            </li>
+          </ul>
+          <div class="totales">
+            <p class="linea-subtotal">
+              <span>Subtotal</span>
+              <span>$1050</span>
+            </p>
+            <p class="linea-total">
+              <strong>Total</strong>
+              <strong>$1050</strong>
+            </p>
+          </div>
         </section>
+      </div>
     </main>
-    <footer>
-        <ul>
-            <a href="https://instagram.com/@puntocafe_ar" target="_blank">
-                @puntocafe_ar
-            </a>
-            <p>Punto Café SRL</p>
-            <p>Horarios: Lunes a Viernes 07:00 a 21:00 hs.</p>
-            <p>2026 Punto Café. Todos los derechos reservados.</p>
-        </ul>
+
+    <footer class="pie">
+      <div class="contenido-pie">
+        <div class="columna-pie">
+          <h3 class="titulo-pie">Punto Café</h3>
+          <p>
+            Tu dosis diaria de café de especialidad, listo para acompañar tu
+            ritmo urbano.
+          </p>
+          <p class="empresa-pie">Punto Café SRL</p>
+        </div>
+        <div class="columna-pie">
+          <h4 class="subtitulo-pie">Navegación</h4>
+          <ul class="lista-pie">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./menu.html">Menú</a></li>
+            <li><a href="./checkout.html">Checkout</a></li>
+            <li>
+              <a
+                class="instagram-link"
+                href="https://instagram.com/@puntocafe_ar"
+                target="_blank"
+                >@puntocafe_ar</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="columna-pie">
+          <h4 class="subtitulo-pie">Horarios</h4>
+          <p>
+            <strong>Lunes a Viernes:</strong><br />
+            07:00 a 20:00 hs.
+          </p>
+          <p>
+            <strong>Sábados y Domingos:</strong><br />
+            09:00 a 19:00 hs.
+          </p>
+        </div>
+      </div>
+      <div class="copyright-pie">
+        <p>© 2026 Punto Café. Todos los derechos reservados.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
