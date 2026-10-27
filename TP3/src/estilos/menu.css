@@ -159,8 +159,12 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra */
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
+.tarjeta-producto:hover {
+    transform: translateY(-4px); /* Sube la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); 
+}
 .tarjeta-producto img {
     width: 100%;
     height: 180px;
