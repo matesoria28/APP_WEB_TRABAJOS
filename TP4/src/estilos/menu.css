@@ -91,6 +91,50 @@ body {
     display: block;
 }
 
+/* Globito del contador del carrito */
+.carrito-header {
+    position: relative;
+    display: inline-block;
+}
+
+.contador-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #D97736;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* Cartel flotante de confirmación */
+.aviso-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2C1D18;
+  color: #FAF5EF;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.aviso-flotante.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .seccion-filtros {
     margin-bottom: 35px;
 }
@@ -159,6 +203,12 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra */
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-4px); /* Sube la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); 
 }
 
 .tarjeta-producto img {
